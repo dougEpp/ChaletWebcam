@@ -51,33 +51,12 @@ public class MainWindow extends Activity {
 
         //generate current photo URL
         photoURL = "http://www.neudoerffer.com/chaletwebcam/pictures/" + year;
-        if (month < 10)
-        {
-            photoURL += "0" + month;
-        }
-        else
-        {
-            photoURL += month;
-        }
-        if (day < 10 )
-        {
-            photoURL += "0" + day;
-        }
-        else
-        {
-            photoURL += day;
-        }
+        photoURL += (month < 10) ? "0" + month : month;
+        photoURL += (day < 10) ? "0" + day : day;
 
         photoURL += "_";
 
-        if (hour < 10)
-        {
-            photoURL += "0" + hour;
-        }
-        else
-        {
-            photoURL += hour;
-        }
+        photoURL += (hour < 10) ? "0" + hour : hour;
         photoURL += "00_";
 
         //display current date/time
